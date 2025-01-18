@@ -569,6 +569,50 @@ html {
   padding-top: 100px;
 }
 
+.tools {
+  position: fixed;
+  bottom: 64px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tools .tool-item {
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #00427a;
+  border: 1px solid #00427a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tools .tool-item img {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(75%) saturate(2632%) hue-rotate(197deg) brightness(90%) contrast(95%);
+  transition: filter 0.3s ease;
+}
+
+.tools .tool-item p {
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.tools .tool-item:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.tools .tool-item:hover {
+  color: #fff;
+  background: #00427a;
+}
+
 .footer {
   background-color: #242424;
   color: #fff;
@@ -951,6 +995,21 @@ html {
     display: none;
   }
 
+  #scrollTopButton {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Button padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Font size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+
+  #scrollTopButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+
   .footer {
     padding: 20px 24px;
     font-size: 12px;
@@ -986,5 +1045,9 @@ html {
 
   .footer .foot1 {
     margin-bottom: 23px;
+  }
+
+  .tools {
+    display: none;
   }
 }

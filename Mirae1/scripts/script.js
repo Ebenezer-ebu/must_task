@@ -2,6 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const burgerMenu = document.getElementById('burger-menu');
   const nav = document.getElementById('nav');
 
+  // Select the button
+  const scrollTopButton = document.getElementById('scrollTopButton');
+
+  // Add a click event listener to scroll to the top
+  scrollTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0, // Scroll to the top
+      behavior: 'smooth', // Smooth scrolling effect
+    });
+  });
+
   burgerMenu.addEventListener('click', () => {
     nav.classList.toggle('active');
   });
