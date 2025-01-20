@@ -588,6 +588,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2px;
   color: #00427a;
   border: 1px solid #00427a;
   font-weight: 700;
@@ -601,6 +602,7 @@ html {
 
 .tools .tool-item p {
   transition: color 0.3s ease;
+  margin: 0;
 }
 
 /* Hover effect */
