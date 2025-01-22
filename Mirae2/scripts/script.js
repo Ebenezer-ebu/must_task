@@ -10,6 +10,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const indicators = document.querySelectorAll('.indicator');
   const sections = document.querySelectorAll('.section');
   const indicatorWrappers = document.querySelectorAll('.indicator-wrapper');
+  const scrollIndicators = document.querySelector('.indicator-bar');
+  const footer = document.querySelector('.footer');
+
+  const observerOptions = {
+    root: null,
+    threshold: 0.5, // 50% of the footer must be visible
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        scrollIndicators.classList.add('hidden');
+      } else {
+        scrollIndicators.classList.remove('hidden');
+      }
+    });
+  }, observerOptions);
+
+  observer.observe(footer);
 
   // Track the currently active index
   let currentIndex = -1;

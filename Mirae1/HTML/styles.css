@@ -653,6 +653,20 @@ html {
   padding: 7px 12px;
   margin-bottom: 4px;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.footer .select-wrp .family div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .select-wrp .family p {
+  margin: 0;
 }
 
 .footer .family2 {
